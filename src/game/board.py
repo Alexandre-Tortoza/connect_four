@@ -1,7 +1,6 @@
 import numpy as np
 
 class Board:
-    # O tabuleiro deve ter dimensão 6x7
     def __init__(self, linhas=6, colunas=7):
         self.linhas = linhas
         self.colunas = colunas
@@ -17,3 +16,20 @@ class Board:
                 return True
         return False
 
+    def getVencedor(self):
+        g = self.grid
+        for p in [1, 2]:
+            for linha in g:
+                if np.any(np.convolve((linha==p).astype(int), np.ones(4), 'valid') == 4):
+                    return p
+            for coluna in g.T:
+                if np.any(np.convolve((coluna==p).astype(int), np.ones(4), 'valid') == 4):
+                    return p
+            for k in range(-self.linhas+1, self.colunas):
+                diag = g.diagonal(k)
+                if len(diag) >= 4 and np.any(np.convolve((diag==p).astype(int), np.ones(4), 'valid') == 4):
+                    return p
+                adiag = np.fliplr(g).diagonal(k)
+                if len(adiag) >= 4 and np.any(np.convolve((adiag==p).astype(int), np.ones(4), 'valid') == 4):
+                    return p
+        return 0

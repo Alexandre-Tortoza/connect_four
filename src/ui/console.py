@@ -1,13 +1,16 @@
 
 class bcolors:
-    RED = '\033[91m'      # vermelho
-    YELLOW = '\033[93m'   # amarelo
-    BLUE = '\033[94m'     # azul para bordas
-    CYAN = '\033[96m'     # azul claro para letras
+    RED = '\033[91m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    CYAN = '\033[96m'
     BOLD = '\033[1m'
-    ENDC = '\033[0m'      # reset de cor
+    ENDC = '\033[0m'
 
 def showTabuleiro(tabuleiro):
+    print("\n" * 130) # por agora vamos fazer dessa forma
+
+
     linhas = len(tabuleiro)
     colunas = len(tabuleiro[0])
 
@@ -21,10 +24,8 @@ def showTabuleiro(tabuleiro):
             if tabuleiro[i][j] == 0:
                 linha_str += "[ ] "
             elif tabuleiro[i][j] == 1:
-                # jogador 1 vermelho
                 linha_str += f"[{bcolors.RED}{bcolors.BOLD}⬤{bcolors.ENDC}] "
             elif tabuleiro[i][j] == 2:
-                # jogador 2 amarelo
                 linha_str += f"[{bcolors.YELLOW}{bcolors.BOLD}⬤{bcolors.ENDC}] "
         print(linha_str)
     
