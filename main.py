@@ -14,15 +14,15 @@ def main():
 
     Fluxo geral:
         1. Exibe o título e as instruções iniciais.
-        2. Solicita a dificuldade escolhida pelo jogador humano.
-        3. Cria a instância da IA e do tabuleiro.
-        4. Alterna os turnos entre o jogador humano e a IA até o jogo terminar.
+        2. Solicita a dificuldade escolhida pelo jogador.
+        3. Cria a instância da Maquina e do tabuleiro.
+        4. Alterna os turnos entre o jogador e a Maquina até o jogo terminar.
         5. Mostra o resultado final (vitória, derrota ou empate).
 
     Regras:
-        - O humano sempre joga primeiro.
-        - As peças do humano são vermelhas.
-        - As peças da IA são amarelas.
+        - O Jogador sempre joga primeiro.
+        - As peças do Jogador são vermelhas.
+        - As peças da Maquina são amarelas.
 
     O jogo termina quando:
         - Um jogador conecta quatro peças seguidas (horizontal, vertical ou diagonal).

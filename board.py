@@ -49,7 +49,7 @@ class Board:
 
         Args:
             coluna (int): índice da coluna onde a peça será colocada
-            jogador (int): identificador do jogador (1 = humano, 2 = IA)
+            jogador (int): identificador do jogador (1 = Jogador, 2 = Maquina)
 
         Returns:
             bool: True se a peça foi colocada com sucesso, False se o movimento for inválido

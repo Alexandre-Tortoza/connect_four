@@ -7,8 +7,8 @@ def showTabuleiro(tabuleiro):
     Args:
         tabuleiro (list[list[int]]): Matriz representando o estado atual do tabuleiro.
             - 0: posição vazia
-            - 1: peça do jogador humano (vermelho)
-            - 2: peça da IA (amarelo)
+            - 1: peça do jogador (vermelho)
+            - 2: peça da Maquina (amarelo)
 
     Exemplo:
         showTabuleiro([
@@ -40,7 +40,7 @@ def showTabuleiro(tabuleiro):
 
 def getJogada():
     """
-    Solicita e valida a jogada do jogador humano via entrada no terminal.
+    Solicita e valida a jogada do jogador via entrada no terminal.
 
     O jogador pode digitar:
         - Uma letra entre 'a' e 'j' (mapeada para colunas 0 a 6)

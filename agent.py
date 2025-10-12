@@ -13,7 +13,7 @@ class AgenteIA:
 
     def __init__(self, nivel_dificuldade):
         """
-        Inicializa o agente de IA com o nível de dificuldade escolhido.
+        Inicializa Maquina com o nível de dificuldade escolhido.
 
         Args:
             nivel_dificuldade (int): 1 = Iniciante, 2 = Intermediário, 3 = Profissional
@@ -65,7 +65,7 @@ class AgenteIA:
         Args:
             tabuleiro (Board): estado atual do tabuleiro
             profundidade (int): limite de recursão
-            maximizando (bool): True se é a vez da IA, False se é a vez do humano
+            maximizando (bool): True se é a vez da Maquina, False se é a vez do Jogador
 
         Returns:
             tuple[int, float]: (melhor_coluna, pontuação estimada)
@@ -116,7 +116,7 @@ class AgenteIA:
             profundidade (int): limite de profundidade da recursão
             alfa (float): melhor valor mínimo encontrado até agora
             beta (float): melhor valor máximo encontrado até agora
-            maximizando (bool): True se é o turno da IA
+            maximizando (bool): True se é o turno da Maquina
 
         Returns:
             tuple[int, float]: (melhor_coluna, pontuação estimada)
@@ -305,7 +305,7 @@ class AgenteIA:
 
         Args:
             tabuleiro (Board): estado atual
-            jogador (int): 1 (humano) ou 2 (Maquina)
+            jogador (int): 1 (Jogador) ou 2 (Maquina)
             tamanho (int): tamanho da sequência (2, 3 ou 4)
 
         Returns:
