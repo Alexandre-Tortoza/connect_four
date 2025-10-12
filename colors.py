@@ -1,3 +1,7 @@
+"""
+aqui são definidas as cores para o terminal...
+"""
+
 class bcolors:
     RED = '\033[91m'
     YELLOW = '\033[93m'
